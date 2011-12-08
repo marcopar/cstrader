@@ -1,0 +1,526 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+        <TITLE></TITLE>
+        <META NAME="GENERATOR" CONTENT="OpenOffice.org 3.1  (Solaris x86)">
+        <META NAME="AUTHOR" CONTENT="Chris Kiick">
+        <META NAME="CREATED" CONTENT="0;0">
+        <META NAME="CHANGEDBY" CONTENT="Chris Kiick">
+        <META NAME="CHANGED" CONTENT="20091017;21585400">
+    </HEAD>
+    <BODY LANG="en-US" DIR="LTR">
+        <H3 ALIGN=CENTER>CSTrader Help File</H3>
+
+        <P STYLE="margin-bottom: 0in">Welcome to CS Trader, the best darn
+	trading tool in Chosen Space. If you are not playing chosen space
+	then you should try it. CS trader is a Java application designed to
+	help users maximize their profit from buying and selling goods at
+	public starbases and planets. <BR><BR>
+        </P>
+        <OL>
+            <LI><P STYLE="margin-bottom: 0in">Start-up Window</P>
+                <P STYLE="margin-bottom: 0in">While CSTrader is starting up and
+	reading in the configuration and data files, it will display a
+	“cylon” dialog bar with the current version number. 
+                </P>
+            <LI><P STYLE="margin-bottom: 0in">Release notes window<BR>The
+	Release notes dialog contains information about CSTrader such as the
+	current revision number, how to contact the developers and a list of
+	new features and bug fixes for each of the last few versions. The
+	first time you run CSTrader, or the first time after it is upgraded
+	to a different version, the release notes dialog will be displayed
+	automatically on start-up. It can be accessed under the Help menu. 
+                </P>
+            <LI><P STYLE="margin-bottom: 0in">Main window<BR>The main
+	application window contains the menu bar, the upper filter and ship
+	information area, and the lower set of panels. 
+                </P>
+                <OL>
+                    <LI><P STYLE="margin-bottom: 0in">Menu Bar
+                        </P>
+                        <OL>
+                            <LI><P STYLE="margin-bottom: 0in">File Menu<BR>Currently the only
+			menu item under File is Exit. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Help Menu
+                                </P>
+                                <OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Help menu item Displays this
+				help file. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">Release notes menu item<BR>Pops
+				up the News dialog. See 2. above. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">About menu item<BR>Pops up the
+				About dialog with information about the software. 
+                                        </P>
+                                </OL>
+                        </OL>
+                    <LI><P STYLE="margin-bottom: 0in">Upper area<BR>The upper area
+		contains a number of input boxes. Each input affects what
+		information is displayed in the lower panes. Some information
+		describes the player or the players ship, which is used in
+		calculating various values. 
+                        </P>
+                        <OL>
+                            <LI><P STYLE="margin-bottom: 0in">Minimum Profit percent box<BR>This
+			box set the minimum percent profit that is acceptable. Any trade
+			route that is under the minimum will be pruned and not displayed
+			in the Routes pane. The default is 0, which means that the route
+			must at least show some profit. Clearing the box will eliminate
+			the limit entirely. If you want to see all routes, regardless of
+			profit level, then leave the box empty. A positive number can be
+			used to set a “worthwhile” threshold so that the route list is
+			not cluttered with low-profit items. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Minimum unit profit box<BR>The
+			unit profit is the amount of profit per item. Some items may have
+			a large total profit, but require trading huge amounts because the
+			unit profit is low. Setting this field can eliminate those routes.
+			Clearing the box means no limit. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Minimum Total profit box<BR>Similar
+			to the Minimum profit percent box, but valued in raw credits
+			instead of percentage points. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Minimum TP/TC. TP means Total
+			Profit. TC is the Turn Cost – how many turns it takes to make
+			the trade. The TP/TC value allows a trader to select the biggest
+			return for the number of turns available to him. This box can be
+			used to filter out routes that take too many turns to complete for
+			the given profit. Clearing the box means no limit. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Item name filter box<BR>This box
+			takes a regular expression and applies it to the item names in the
+			lower panels. The item name must match the regular expression or
+			it will not be displayed. The easiest usage is to put a single
+			item name into the filter to see just those items. The default is
+			an empty expression which matches all item names. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">From Sys filter box.<BR>The from
+			system is the name of the system in which the item to be traded is
+			bought – the “ForSale” system. Entering a regular expression
+			in the box will limit the items displayed to those that match the
+			regular expression. An empty box matches all systems. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">From Loc filter box<BR>Immediately
+			to the right of the From sys filter box is a location filter box
+			for the from location. This works similarly to the From system
+			filter box, except the regular expression is matched against the
+			name of a planet or public starbase. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">To sys filter box<BR>The To
+			system is the system name in which the item to be traded is sold –
+			the “Wanted” system. Works just like the From sys box except
+			on the To system name. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">To loc filter box<BR>Works just
+			like the From Loc filter box except applied to the destination
+			starbase/planet name. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Weight Limit filter box<BR>Limits
+			trade routes to use only the indicated amount of cargo space. If
+			possible, CSTrader will take into account the unit weight of an
+			item in determining the quantity to trade. This box can be set to
+			the value of the cargo space of the users ship. It can be set to
+			less if the ship already has some cargo on board, or the user
+			wants to reserve some space for another use. Leaving this box
+			blank will not limit trades by weight. This value is saved and
+			restored so it is not lost when CSTrader exits. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Credit Limit filter box<BR>Limits
+			trades to those requiring no more cash than this. Leave blank if
+			cash is not a problem and it will not limit quantities based on
+			credit limit. Very useful to beginners who have severely limited
+			funds. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Current Location pull-down
+			menu<BR>Sets the current location of the players ship. This
+			includes all of the named systems as well as the numbered
+			expanses. CSTrader uses this information to calculate how many
+			turns it takes to get to the From system for a trade route. The
+			special value NoSystem will cause CSTrader to assume that you are
+			already at the From location. This is useful when composing routes
+			with multiple trades. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Sector box<BR>The sector number
+			of the players ship. It can be left blank, but then the
+			application will have to make guesses about the turn costs
+			involved when travelling within a sector. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Grid box<BR>The grid number of
+			the players ship. Can be left blank with the same caveat as the
+			Sector box. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Hyper Jump box<BR>When moving
+			between systems, the Hyper Jump value is used to calculate the
+			turn cost. Each ship has it's own Hyper Jump value. Find it by
+			selecting “My Ships” at the top of the Chosen Space window,
+			and clicking on the CLASS of the ship. The Hyper Jump value will
+			be at the bottom. Leaving out the Hyper Jump value will throw the
+			turn cost calculation way off. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Light Speed box<BR>The Light
+			Speed value is used to calculate the turn costs of moving inside a
+			system (sector travel). The value for a particular ship can be
+			found right next to the Hyper Jump value. Again it is highly
+			recommended to fill in this value. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Available Turns filter
+			box<BR>Limits trade routes to those that can be completed in less
+			than this number of turns. Leaving it blank implies unlimited
+			turns. This value may have to be adjusted after each movement. 
+                                </P>
+                            <LI><P STYLE="margin-bottom: 0in">Calculate Routes button<BR>This
+			button can be used to recalculate the trade routes whenever any of
+			the values in the upper area have changed. Changing a filter value
+			should take effect right away. Other values may require that the
+			routes be recomputed. Routes are automatically recomputed whenever
+			the price list changes. 
+                                </P>
+                        </OL>
+                    <LI><P STYLE="margin-bottom: 0in">Lower Panel Area<BR>There are
+		three tabs in the lower area that correspond to each of the item
+		display panels. 
+                        </P>
+                        <OL>
+                            <LI><P STYLE="margin-bottom: 0in">System Pricelists pane
+                                </P>
+                                <OL>
+                                    <LI><P STYLE="margin-bottom: 0in">System tabs<BR>The systems
+				pricelists pane is used to display items forsale and wanted for
+				each specific system. The system can be selected via one of the
+				System tabs along the top of the pane. Only named systems have
+				price list information available. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">Systems Button bar
+                                        </P>
+                                        <OL>
+                                            <LI><P STYLE="margin-bottom: 0in">Update Pricelist button<BR>This
+					button brings up the Update Pricelist dialog for the current
+					system tab. The Update pricelist dialog is explained below. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Last Update tag<BR>Shows the
+					timestamp of the last pricelist update. Very useful in
+					determining if you have the latest prices. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Export Pricelist button<BR>Brings
+					up the export pricelists dialog (see below) so that you can view
+					or save the raw pricelist data. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Clear Pricelist button<BR>Removes
+					all pricelist data for this system. It is not necessary to clear
+					the pricelist before updating. 
+                                                </P>
+                                        </OL>
+                                    <LI><P STYLE="margin-bottom: 0in">For Sale/Wanted tables<BR>The
+				For Sale and Wanted panels display the tables of pricelist data
+				for the current system. Both panes have the same format but
+				indicate different data. Clicking on a column will cause the
+				table to be sorted by that column. The sort can be toggled
+				ascending/descending by clicking again. Hovering the cursor over
+				a row in the table will display a tooltip containing information
+				about profitable trades for that particular item and location.
+				The ForSale tooltip will display locations where the item can be
+				sold for a profit. The Wanted tooltip shows where the item can be
+				purchased for less than the wanted price. 
+                                        </P>
+                                        <OL>
+                                            <LI><P STYLE="margin-bottom: 0in">Item column<BR>The name of the
+					item. Must match the regex in the item filter box to be
+					displayed. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Weight column<BR>The unit
+					weight of the item. Most items weigh 1 ton per unit, but some
+					(Hull Plating for example) weigh more per unit. This column is
+					NOT filtered by the Weight limit box in the upper area. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Quantity column<BR>How many
+					units of the Item are For Sale or Wanted. 
+                                                </P>
+                                            <LI><P STYLE="margin-bottom: 0in">Price column<BR>The prices are
+					not filtered by the Credits box in the upper area 
+                                                </P>
+                                                <OL>
+                                                    <LI><P STYLE="margin-bottom: 0in">For Sale price – the price
+						at which each unit of the item is selling 
+                                                        </P>
+                                                    <LI><P STYLE="margin-bottom: 0in">Wanted price – the price at
+						which the item can be sold 
+                                                        </P>
+                                                </OL>
+                                            <LI><P STYLE="margin-bottom: 0in">Location<BR>The name of the
+					planet or Starbase at which the item can be bought or sold. This
+					column is filtered by the From/To Loc filter box in the upper
+					area. 
+                                                </P>
+                                        </OL>
+                                </OL>
+                            <LI><P STYLE="margin-bottom: 0in">Galaxy Pricelist pane<BR>The
+			galaxy pricelist displays the same data as the system pricelists,
+			except that data for all the systems has been aggregated into one
+			table. 
+                                </P>
+                                <OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Update All Prices button<BR>Brings
+				up the Update Pricelist dialog in a mode where it can be used to
+				update all the system data at once. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">Export All Prices button<BR>Used
+				to export all pricelist data for all systems at once. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">Clear All Pricelists
+				button<BR>Deletes ALL of the pricelist data for every system. 
+                                        </P>
+                                    <LI><P STYLE="margin-bottom: 0in">For Sale/Wanted panels<BR>This
+				is the same as the System For Sale/Wanted panes, except that an
+				extra column containing the System name has been added. 
+                                        </P>
+                                </OL>
+                            <LI><P STYLE="margin-bottom: 0in">Routes Pane<BR>The route table
+			is the heart of the CSTrader application. This table can be used
+			to identify specific trades. A trade consists of moving from the
+			ships current location to the From location, buying the stated
+			quantity of the displayed item, moving to the To location and
+			selling that item for a profit. CSTraders role is to suggest the
+			most profitable trades. The main way of doing so is with the trade
+			routes table. Hovering the mouse over a row will display the
+			optimized turn cost and the resulting TP/TC for that trade. Turn
+			cost and optimized turn cost are explained below. 
+                                </P>
+                                <OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Columns
+                                        </P>
+                                        <OL>
+                                            <LI><P STYLE="margin-bottom: 0in">Item column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">The name of the item to be traded.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Weight column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Total weight of the quantity to be
+					traded. This can be more than the quantity if the item weight
+					more than 1 Isaton per unit.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Quantity column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">How many units of the item to be
+					traded.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Total Profit column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">How many credits are expected to
+					be made if this trade is completed.  Note that the actual profit
+					may be less due to taxes, or changes in price during transit.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Turn cost column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">How many turns the trade will
+					take.  Unless the current system is set to “NoSystem”, the
+					turn cost is the sum of the turns it takes to get from the
+					current location to the ForSale location, plus the turns it
+					takes to get from the ForSale location to the Wanted location. 
+					If “NoSystem” is selected, only the latter turn cost is
+					used.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">TP/TC column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Total Profit per Turn Cost.  How
+					many credits per turn can be expected from this trade.  The
+					TP/TC column is often more useful than the Total Profit column.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">UP/TC column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Unit Profit per Turn Cost. The
+					unit profit is the profit for a single unit of the item to be
+					traded.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">% column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Profit as a percent of investment.
+					 A 100% profit will double your money.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">From column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">The name of the location where the
+					item is For Sale.  This is either a planet or a public starbase.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">From System column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Which system the item for sale is
+					in.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">To column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Name of the location of the item
+					Wanted.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">To System column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Which system the item wanted is
+					in.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Sale $ column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">How much the item costs at the
+					ForSale location.</P>
+                                            <LI><P STYLE="margin-bottom: 0in">Want $ column
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">How much the item sells for at the
+					Wanted location.</P>
+                                        </OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Route Stuff Popup Menu
+                                        </P>
+                                        <P STYLE="margin-bottom: 0in">Right clicking on a row of the
+				routes table will bring up a pop-up menu.  Currently there is
+				only 1 item on the menu.</P>
+                                        <OL>
+                                            <LI><P STYLE="margin-bottom: 0in">Complete Trade Popup menu item
+                                                </P>
+                                                <P STYLE="margin-bottom: 0in">Selecting the Complete Trade menu
+					item will cause a number of changes to the displayed
+					information.  The inventory of the ForSale location will be
+					decreased by the quantity to trade. Likewise the Wanted
+					inventory will also be decreased.  If set, the turn limit field
+					will be decreased by the turn cost, and the credits field will
+					be increased by the profit.  Finally, the current location will
+					be set to the Wanted (to) location.  If the trade is made
+					exactly as the route table suggests, then this menu item will
+					automatically update the information to match.</P>
+                                                <P STYLE="margin-bottom: 0in">NOTE: this permanently alters the
+					pricelist data. It cannot be un-done.</P>
+                                        </OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Route tooltip</P>
+                                        <P STYLE="margin-bottom: 0in">If a row in the route table is
+				selected, then hovering the cursor will bring up a tooltip that
+				displays for a few seconds.  The tooltip will display the
+				“optimized” turn cost for the trade. This is explained under
+				“Turn Costs” below. If there are other items that can be
+				traded on the same route, the tooltip will display a table of
+				suggested trades between the from and to locations.  The
+				suggestions are ordered so as to maximize the profit.  The total
+				profit and TP/TC for the suggested trade is also displayed. If
+				there are no suggestions, only the optimized turn cost is
+				displayed.</P>
+                                </OL>
+                        </OL>
+                </OL>
+            <LI><P STYLE="margin-bottom: 0in">Update Pricelist(s) dialog
+                </P>
+                <P STYLE="margin-bottom: 0in">This dialog is displayed when the
+	Update Pricelist(s) button is used in any of the system tabs or on
+	the galaxy pricelist tab. Importing pricelists is how cstrader gets
+	the data from the game.  There are two formats supported: HTML
+	“source” and plain text.  Using plain text is easier, but the
+	HTML code contains more information, such as the exact locations of
+	each planet and starbase.  With this information the application can
+	make much more exact calculations of turn costs.  Using the plain
+	text, only the system is known and the turn costs for in-system
+	travel have to be estimated.</P>
+                <OL>
+                    <LI><P STYLE="margin-bottom: 0in">HTML source format</P>
+                        <P STYLE="margin-bottom: 0in">The pricelist data can be pasted or
+		loaded as HTML code from the pricelist pane of the CS game window. 
+		To do this, right click on the pricelist in the game window and
+		choose “view frame source.”  The HTML code will be displayed in
+		a window.  It can be saved to a file or copied to the clipboard. 
+		For the galaxy pricelist import dialog, the HTML for all of the
+		pricelists should be concatenated into one file.  The order does
+		not matter.</P>
+                    <LI><P STYLE="margin-bottom: 0in">Plain text</P>
+                        <P STYLE="margin-bottom: 0in">Simply select all the text in the
+		pricelist.  Copy it to the clipboard, or save it in a file.  For
+		the galaxy pricelist, stick them all together, the order isn't
+		important.</P>
+                        <P STYLE="margin-bottom: 0in">There are two methods that can be
+		used to read in the data.  It can be pasted directly into the
+		dialog window, or loaded from a file.</P>
+                </OL>
+        </OL>
+        <OL>
+            <LI>	<OL>
+                    <LI VALUE=1><P STYLE="margin-bottom: 0in">Pasting</P>
+                        <P STYLE="margin-bottom: 0in">Simply right-click on the text window
+		and select “paste” from the menu.  The text  box can be cleared
+		by selecting the “clear” item from the same menu.  OK at the
+		bottom will import the information, cancel will leave the dialog
+		without importing the information.</P>
+                    <LI><P STYLE="margin-bottom: 0in">Load from file</P>
+                        <P STYLE="margin-bottom: 0in">If the text or HTML is in a file,
+		then the Load... button will bring up a file chooser dialog.
+		Navigate to the file and push <BR>“Open.”  The contents of the
+		file will be loaded into the dialog text window.  The contents can
+		be cleared using the popup menu.</P>
+                </OL>
+            <LI><P STYLE="margin-bottom: 0in">Export Pricelists dialog</P>
+                <P STYLE="margin-bottom: 0in">The Export pricelists dialog displays
+	a text area with the appropriate pricelist data.  It is in the same
+	format as the plain text imported data.  Some information is left as
+	0 because it is not needed.  Select Cancel to return to the main
+	application.  Save.. will bring up a file chooser dialog.  WARNING:
+	saving to an existing file will over-write it without warning. The
+	contents can also be copied to the clipboard with the Copy to
+	clipboard and exit button.  This pastes the contents of the dialog
+	into the clipboard and returns to the main window.</P>
+            <LI><P STYLE="margin-bottom: 0in">Other informaiton
+                </P>
+                <OL>
+                    <LI><P STYLE="margin-bottom: 0in">Turn Costs
+                        </P>
+                        <OL>
+                            <LI><P STYLE="margin-bottom: 0in">Formula</P>
+                                <P STYLE="margin-bottom: 0in">The number of turns it takes to move
+			from one place to another in Chosen Space is based on a secret
+			formula. Cstrader uses a formula derived from some of the actual
+			turn-costs in the game.  It is not the exact formula. However, it
+			should be accurate to within 1 or 2 turns.</P>
+                            <LI><P STYLE="margin-bottom: 0in">Exact locations</P>
+                                <OL>
+                                    <LI><P STYLE="margin-bottom: 0in">Hyperjumps</P>
+                                        <P STYLE="margin-bottom: 0in">For hyperjumps, only the start and
+				end system are needed to calculate the turn cost.   This
+				information is available regardless of how the pricelist data is
+				entered (see “Update Pricelist” above).  Therefore the costs
+				for moving between systems is always quite precise.</P>
+                                    <LI><P STYLE="margin-bottom: 0in">Lightspeed</P>
+                                        <P STYLE="margin-bottom: 0in">When moving within a system (sector
+				travel) a different formula is used.  In order for the turn cost
+				to be exactly calculated in these cases, the sector and grid
+				coordinates of the start and end locations must be known.  This
+				information is only available if the HTML import method was used.
+				 Otherwise, a jump half-way across the system is assumed, using
+				the current lightspeed value. 
+                                        </P>
+                                        <P STYLE="margin-bottom: 0in">Movement within a sector (grid
+				travel) is a simple distance formula and is always exact, IF the
+				exact locations are known.</P>
+                                    <LI><P STYLE="margin-bottom: 0in">Optimizations</P>
+                                        <P STYLE="margin-bottom: 0in">Making straight from-to jumps is
+				not always the least costly way to move.  Hyperjumps are rounded,
+				so making a series of smaller “hops” may use less turn than
+				one long jump.  This can save several hundred turns per trade.  A
+				smaller optimization can be made for long grid moves by jumping
+				out of and back into the sector.  The “optimized turn cost”
+				tooltip for the routes table uses these optimizations for it's
+				calculation.</P>
+                                </OL>
+                        </OL>
+                    <LI><P STYLE="margin-bottom: 0in">Weights</P>
+                        <P STYLE="margin-bottom: 0in">The weight of an item is specified in
+		pricelists only when it is for sale. This means that if the item is
+		only wanted, it's impossible to know its price. To overcome this
+		the software learns and remember the weights of the items while it
+		sees them. If the weight of an item is unknown a value of 1IT per
+		unit is assumed.</P>
+                    <LI><P STYLE="margin-bottom: 0in">development information
+                        </P>
+                        <P STYLE="margin-bottom: 0in">CSTrader is an open-source project
+		hosted on the kenai web site under “cstrader”.  Anyone can
+		download or browse the source. Contributors to the code are
+		welcome.  Contact the author for access.</P>
+                        <OL>
+                            <LI><P STYLE="margin-bottom: 0in">feedback
+                                </P>
+                                <P STYLE="margin-bottom: 0in">Feedback can be given in-game by
+			leaving a message on the Brax (Raxia) system board, or by message
+			to Hybris.</P>
+                            <LI><P STYLE="margin-bottom: 0in">bugs
+                                </P>
+                                <P STYLE="margin-bottom: 0in">The kenai project web page has a bug
+			tracker for CSTrader.  Please file bug reports there, and check
+			there for updates on the fixes.</P>
+                        </OL>
+                </OL>
+                <P></P>
+        </OL>
+    </BODY>
+</HTML>
