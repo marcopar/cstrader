@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Release notes</title>
+    </head>
+    <body>
+        <font color="#FF0000"><b>Do you like this software? Come to Brax and sign the logbook in the planet boards!</b></font><br/>
+        <br/>
+        <br/>
+        <font size="+1"><b>NOTES</b></font><br/>
+        <b><i>About Expanse names</i></b><br/>
+        Expanse are named using a system of coordinates that has is origin in the center of the galaxy.
+        The letters N,E,W,S are the cardinal points as we are used to see them on maps.
+        N2E2 means 2 squares in North direction and 2 East, that are the coordinates of Raxia.
+        An extensive discussion of this system of coordinates can be found here: http://forum.pbbghub.com/viewtopic.php?f=72&t=11583
+        <br/><b><i>About loading pricelists from HTML source</i></b><br/>
+        Copying pricelists from the HTML source requires more clicks but gives more information such as grid and sector of starbases.
+        This information can be used to perform better calculations when moving at lightspeed.
+        <br/><b><i>About sector, grid and lightspeed</i></b><br/>
+        Sector and grid are used to calculate the exact turns needed to move when the trip is done at light speed.<br/>
+        The current formula should be accurate to within a turn or two of the actual game turns.<br/>
+        The formula is used only when you fill both grid and sector field AND when you load pricelists from HTML source.<br/>
+        To deactivate the formula put an empty value in grid and sector.<br/>
+        The total turn cost is the sum of the turns needed to go from the current location to the start of the route and the turn cost of the route.<br/>
+        <b><i>About hyperjumps</i></b><br/>
+        The formula used for hyperjumps is an approximation of the real formula but it quite precise.<br/>
+        If you have information about the real formula write me.<br/>
+        The total turn cost is the sum of the turns needed to go from the current location to the start of the route and the turn cost of the route.<br/>
+        <b><i>About the weight</i></b><br/>
+        The weight of an item is specified in pricelists only when it is for sale.<br/>
+        This means that if the item is only wanted, it's impossible to know its price.<br/>
+        To overcome this the software learns and remember the weights of the items while it sees them.
+        If the weight of an item is unknown a value of 1IT per unit is assumed.<br/>
+        <br/>
+        <br/>
+        <font size="+1"><b>Version 0.9.7</b></font><br/>
+        <UL>
+            <li>New expanses.</li>
+        </UL>
+        <font size="+1"><b>Version 0.9.6</b></font><br/>
+        <UL>
+            <li>Statistics page.</li>
+            <li>Expanse pricelists support.</li>
+        </UL>
+        <font size="+1"><b>Version 0.9.5.1</b></font><br/>
+        <UL>
+            <li>Performance optimizations.</li>
+        </UL>
+        <font size="+1"><b>Version 0.9.5</b></font><br/>
+        <UL>
+            <LI>Added a Help:Help menu item. Started a real help file. Needs work.</LI>
+            <LI>Lightspeed transfers turn cost calculation.</LI>
+            <LI>Added the available credits limit field.</LI>
+            <LI>Added clear all pricelists button in galaxy price list panel.</LI>
+            <LI>Fixed bug with Export Pricelist where all weights were 0. Weight is accurate now.
+            <LI>New functionality for ImportPriceList - can now parse the raw HTML form of price list. IE: "view source", cut and paste.
+                The HTML source has the exact location data for each planet and SB.
+            <LI>Made quantity field of system and galaxy pricelists editable. Handy if
+                someone beat you to that deal on Tetrium.  NOTE: lists need to be re-sorted
+                after changing a quantity, but the change is immediately reflected in routes and
+                pricelists. </LI>
+            <LI>Added "optimal" turns calculation. System-to-system and grid-to-grid travel uses
+                a rounded distance formula. Sometimes it is shorter to break the trip up
+                into smaller jumps.  The optTurns figures out what the turn cost would be if
+                broken into 1-unit jumps. Does not apply to sector travel, which uses ad
+                different formula.</LI>
+            <LI>Added tooltip to route table showing optimal turn cost and TP/TC.</LI>
+            <LI>Added ExportAll button to galaxy pricelist panel.</LI>
+            <LI>Added UpdateAll button in galaxy pricelist. Updates all pricelists from a
+                single concatenated text or HTML input.</LI>
+            <LI>Now pricelists can be saved/loaded via the import/export pricelist dialogs.
+                This works for galaxy (ALL) pricelists as well.
+                NOTE: save file dialog doesn't ask about existing files, so you can stomp on a file
+                when saving if you are not careful.  You'd think the standard save dialog would include
+                that feature.  Oh well.  Be careful, kids.</LI>
+            <LI>Available Turns limit filter.
+            <LI>Fixed minor bug with the lightSpeed field.
+        </UL>
+        <br/>
+        <font size="+1"><b>Version 0.9.4</b></font><br/>
+        <UL>
+            <LI>Changed the internal pricelist format. As a side effect all your pricelists have been wiped. Sorry.
+            <LI>Fixed turn calculation in order to reflect game changes.
+        </UL>
+        <font size="+1"><b>Version 0.9.3.2</b></font><br/>
+        <ul>
+            <li>Fixed a huge stupid bug that was stopping first time users to start the program. Spread the word if you know one of them.</li>
+        </ul>
+        <br/>
+        <font size="+1"><b>Version 0.9.3.1</b></font><br/>
+        <ul>
+            <li>Fixed bug about total profit for weights greater than 1.</li>
+            <li>Weight support.</li>
+            <li>Tooltips.</li>
+        </ul>
+        <br/>
+        <font size="+1"><b>Version 0.9.2</b></font><br/>
+        <ul>
+            <li>Added location filters</li>
+            <li>Added better filter support in system pricelists</li>
+        </ul>
+        <br/>
+        <font size="+1"><b>Version 0.9.0</b></font><br/>
+        <ul>
+            <li>Added turn cost of a route</li>
+            <li>Added TP/TC (Total profit / Turn cost)</li>
+            <li>Added TP/TC filter</li>
+        </ul>
+        <br/>
+        <br/>
+        Have fun!
+    </body>
+</html>
