@@ -16,7 +16,6 @@
 package eu.flatworld.cstrader;
 
 import eu.flatworld.commons.Storage;
-import eu.flatworld.commons.Tables;
 import eu.flatworld.cstrader.data.ItemLine;
 import eu.flatworld.cstrader.data.Pricelist;
 import eu.flatworld.commons.log.LogX;
