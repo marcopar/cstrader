@@ -1,0 +1,3 @@
+Features include: automatically find routes along the galaxy, system pricelists view, galaxy pricelist view, sort and filter pricelists, ignore faction only starbases, price watch on wanted and for sale items.
+Software is written in Java and that's all you need to run it. Software has been reported working on Windows, Linux and Mac.
+Importing using Internet Explorer and Firefox should work. Please report any problem you find by contacting hybris ingame or in the Chosen Space forum.
